@@ -4,8 +4,8 @@
 
 `build-images.sh` builds the Docker images used to create the packages:
 
-- `italiangrid/voms-admin-packager:centos6`
-- `italiangrid/voms-admin-packager:centos7`
+- `italiangrid/pkg.voms-admin-server:centos6`
+- `italiangrid/pkg.voms-admin-server:centos7`
 
 These images depend on the `italiangrid/build-centos6` and `italiangrid/build-centos7`
 common images.
