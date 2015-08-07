@@ -7,8 +7,11 @@
 - `italiangrid/pkg.voms-admin-server:centos6`
 - `italiangrid/pkg.voms-admin-server:centos7`
 
-These images depend on the `italiangrid/build-centos6` and `italiangrid/build-centos7`
-common images.
+These images depend on the `italiangrid/build-centos6` and
+`italiangrid/build-centos7` common images.
+
+`push-images.sh` pushes the images to a private Docker registry whose host
+must be defined with the `DOCKER_REGISTRY_HOST` environment variable.
 
 ## Parameters
 
@@ -28,7 +31,7 @@ Packages are built in the following directories:
 
 ```
 ## Run
-$ docker run -d italiangrid/voms-admin-server-packager:centos6
+$ docker run -d italiangrid/pkg.voms-admin-server:centos6
 9bea23a8c8684ec23c0fe966215300ed704b6545fe42dc22ae8212d7fac5658f
 
 $ docker logs -f 9bea23a8c8684ec23c0fe966215300ed704b6545fe42dc22ae8212d7fac5658f
