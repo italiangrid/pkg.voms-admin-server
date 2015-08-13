@@ -9,6 +9,12 @@
 %global pom_version @@POM_VERSION@@
 %global python_version @@PYTHON@@
 
+%if 0%{?rhel} == 5
+%define jdk_version 1.7.0
+%else
+%define jdk_version 1.8.0
+%endif
+
 %if %{?build_number:1}%{!?build_number:0}
 %define release_version 0.dev.%{build_number}
 %else
@@ -30,9 +36,9 @@ BuildArch:      noarch
 
 BuildRequires:  apache-maven
 BuildRequires:  jpackage-utils
-BuildRequires:  java-1.8.0-openjdk-devel
+BuildRequires:  java-%{jdk_version}-openjdk-devel
 
-Requires: java-1.8.0-openjdk-devel
+Requires: java-%{jdk_version}-openjdk-devel
 Requires: python(abi) = 2.6
 
 %description
@@ -147,7 +153,7 @@ fi
 
 %changelog
 * Tue Feb 10 2015 Andrea Ceccanti <andrea.ceccanti at cnaf.infn.it> - 3.4.0-0
-- VOMS Admin now requires Java 8
+- Updated JDK dependency
 
 * Tue Feb 10 2015 Andrea Ceccanti <andrea.ceccanti at cnaf.infn.it> - 3.3.3-1
 - Bumped version to 3.3.3.

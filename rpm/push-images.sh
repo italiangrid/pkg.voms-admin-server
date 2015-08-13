@@ -1,6 +1,6 @@
 #!/bin/bash
 set -ex
-tags=$(find . -type d -maxdepth 1 -mindepth 1| sed -e "s/\.//" -e "s#/##")
+tags="centos5 centos6 centos7"
 
 if [ -z "${DOCKER_REGISTRY_HOST}" ]; then
   echo "Please define the DOCKER_REGISTRY_HOST environment variable before running this script."

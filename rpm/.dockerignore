@@ -1,0 +1,2 @@
+./build-images.sh
+./push-images.sh

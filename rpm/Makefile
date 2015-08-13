@@ -38,12 +38,6 @@ libs_dir=/var/lib/$(name)/lib
 # python runtime dep
 python=python26
 
-# Oracle libs prefix path
-oracle_path=/usr/lib64/oracle
-
-# Oracle jar name
-oracle_jar=ojdbc6.jar
-
 .PHONY: clean rpm
 
 all: rpm
@@ -66,10 +60,7 @@ prepare-sources: clean
 
 prepare-spec: prepare-sources
 	sed -e 's#@@POM_VERSION@@#$(pom_version)#g' \
-    	-e 's#@@PYTHON@@#$(python)#g' \
-    	-e 's#@@ORACLE_PATH@@#$(oracle_path)#g' \
-    	-e 's#@@ORACLE_JAR@@#$(oracle_jar)#g' \
-		$(spec_src) > $(spec)
+    	-e 's#@@PYTHON@@#$(python)#g' $(spec_src) > $(spec)
 
 rpm: prepare-spec
 	mkdir -p $(rpmbuild_dir)/BUILD \

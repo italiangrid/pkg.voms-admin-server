@@ -4,11 +4,16 @@
 
 `build-images.sh` builds the Docker images used to create the packages:
 
+
+- `italiangrid/pkg.voms-admin-server:centos5`
 - `italiangrid/pkg.voms-admin-server:centos6`
 - `italiangrid/pkg.voms-admin-server:centos7`
 
-These images depend on the `italiangrid/build-centos6` and
-`italiangrid/build-centos7` common images.
+These images depend on the following common images:
+
+- italiangrid/build-centos5
+- italiangrid/build-centos6
+- italiangrid/build-centos7
 
 `push-images.sh` pushes the images to a private Docker registry whose host
 must be defined with the `DOCKER_REGISTRY_HOST` environment variable.

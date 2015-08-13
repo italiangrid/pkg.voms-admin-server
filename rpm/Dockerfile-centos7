@@ -4,4 +4,4 @@ user build
 add Makefile ./voms-admin-server.spec.in /home/build/
 workdir /home/build
 
-entrypoint make
+cmd /bin/bash -c make

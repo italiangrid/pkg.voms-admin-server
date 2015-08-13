@@ -1,0 +1,8 @@
+FROM  italiangrid/build-centos5
+
+run yum -y install oracle-instantclient-basic redhat-rpm-config
+user build
+add Makefile ./voms-admin-server.spec.in /home/build/
+workdir /home/build
+
+CMD /bin/bash -c make
