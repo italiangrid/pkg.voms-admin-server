@@ -1,4 +1,5 @@
 #!/bin/bash
+set -ex
 tags="centos5 centos6 centos7"
 
 for t in ${tags}; do
