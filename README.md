@@ -9,6 +9,7 @@ to generate packages for voms-admin-server version >=  3.4.0.
 ## Supported platforms
 
 - RPM-based
+	- centos5
 	- centos6
 	- centos7
 
