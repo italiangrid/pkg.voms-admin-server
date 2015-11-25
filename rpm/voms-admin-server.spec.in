@@ -3,7 +3,7 @@
 
 %global random_num %(cat /dev/urandom | tr -cd 'a-f0-9' | head -c 8)
 
-%global base_version 3.5.0
+%global base_version 3.4.0
 %global base_release 1
 
 %global pom_version @@POM_VERSION@@
@@ -153,7 +153,7 @@ fi
 %attr(-,voms,voms) %dir %{_localstatedir}/log/voms-admin
 
 %changelog
-* Wed Oct 28 2015 Andrea Ceccanti <andrea.ceccanti at cnaf.infn.it> - 3.5.0-0
+* Wed Oct 28 2015 Andrea Ceccanti <andrea.ceccanti at cnaf.infn.it> - 3.4.1.0
 - Added dependency on curl and bumped version to 3.5.0
 
 * Tue Feb 10 2015 Andrea Ceccanti <andrea.ceccanti at cnaf.infn.it> - 3.4.0-1
