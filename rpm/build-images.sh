@@ -1,7 +1,7 @@
 #!/bin/bash
 set -ex
-tags="centos5 centos6 centos7"
+tags="centos6"
 
 for t in ${tags}; do
-  docker build -t italiangrid/pkg.voms-admin-server:${t} -f Dockerfile-${t} .
+  docker build -t italiangrid/pkg.voms-admin-server:${t} -f Dockerfile.${t} .
 done
