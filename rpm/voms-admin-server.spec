@@ -6,9 +6,6 @@
 %global base_version 3.4.1
 %global base_release 1
 
-%global pom_version @@POM_VERSION@@
-%global python_version @@PYTHON@@
-
 %if 0%{?rhel} == 5
 %define jdk_version 1.7.0
 %else
@@ -16,7 +13,7 @@
 %endif
 
 %if %{?build_number:1}%{!?build_number:0}
-%define release_version 0.dev.%{build_number}
+%define release_version 0.build.%{build_number}
 %else
 %define release_version %{base_release}
 %endif

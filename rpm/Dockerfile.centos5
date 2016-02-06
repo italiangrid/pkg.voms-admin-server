@@ -5,3 +5,5 @@ ENV BUILD_REPO git://github.com/italiangrid/voms-admin-server.git
 ENV BUILD_TAG develop
 ENV PKG_REPO git://github.com/italiangrid/pkg.voms-admin-server.git
 ENV PKG_TAG develop
+
+USER build
