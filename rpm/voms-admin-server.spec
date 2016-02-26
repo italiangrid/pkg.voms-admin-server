@@ -150,7 +150,7 @@ fi
 %attr(-,voms,voms) %dir %{_localstatedir}/log/voms-admin
 
 %changelog
-* Thu Feb 25 2016 Andrea Ceccanti <andrea.ceccanti at cnaf.infn.it> - 3.4.2-0
+* Thu Feb 25 2016 Andrea Ceccanti <andrea.ceccanti at cnaf.infn.it> - 3.4.2-1
 - Packaging for version 3.4.2
 
 * Wed Oct 28 2015 Andrea Ceccanti <andrea.ceccanti at cnaf.infn.it> - 3.4.1.0
